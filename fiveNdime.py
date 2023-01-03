@@ -5,7 +5,6 @@ import math
 import xlsxwriter
 from scipy import stats
 import yfinance as yf
-import matplotlib.pyplot as plt
 from GoogleNews import GoogleNews
 
 
