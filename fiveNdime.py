@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import math
 import xlsxwriter
-from scipy import stats
 import yfinance as yf
 from GoogleNews import GoogleNews
 
