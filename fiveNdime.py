@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import math
-import xlsxwriter
 import yfinance as yf
 from GoogleNews import GoogleNews
 
@@ -13,12 +11,12 @@ st.title("five:blue[&]dime")
 
 st.image("markus-winkler-IrRbSND5EUc-unsplash.jpg",caption =None, clamp=False, channels="RGB", output_format="auto")
 symbol=""
-symbol = st.text_input('Stock name :', 'ex .. AAPL , FB , etc ')
+symbol = st.text_input('Stock name :')
 #symbol = 'AAPL'
 if symbol != '':
     stock = yf.Ticker(symbol)
     stock_df = stock.history(period="5y")
-    line_graph =stock_df['Close'].plot(title=symbol +" stock price")
+    #line_graph =stock_df['Close'].plot(title=symbol +" stock price")
     st.line_chart(stock_df, y="Close")
 
     #vote variable for voting for buying
