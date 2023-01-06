@@ -113,7 +113,7 @@ if symbol != '':
 
 
     st.subheader("")
-    st.subheader("Latest NEWS : "+symbol)
+    
 
      #moving averages
 
@@ -129,7 +129,7 @@ if symbol != '':
     plt.legend()
     st.pyplot(fig)
 
-
+    st.subheader("Latest NEWS : "+symbol)
     #NEWS Part
     with st.container():
         gNews = GoogleNews(period = '5d')
