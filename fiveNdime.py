@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 st.title("five:blue[&]dime")
 
 
-st.image("markus-winkler-IrRbSND5EUc-unsplash.jpg",caption =None, clamp=False, channels="RGB", output_format="auto")
+st.image("img2.jpg",caption =None, clamp=False, channels="RGB", output_format="auto")
 symbol=""
 symbol = st.text_input('Stock name :')
 #symbol = 'AAPL'
