@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import yfinance as yf
 from GoogleNews import GoogleNews
+import matplotlib.pyplot as plt
 
 
 
@@ -114,7 +115,19 @@ if symbol != '':
     st.subheader("")
     st.subheader("Latest NEWS : "+symbol)
 
+     #moving averages
 
+    st.markdown("**Moving Average vs Closing Price**")
+    ma100 = stock_df.Close.rolling(100).mean()
+    ma200 = stock_df.Close.rolling(200).mean()
+    fig = plt.figure(figsize = (12,6))
+    plt.plot(stock_df.Close, 'b', label = 'Closing Price')
+    plt.plot(ma100, 'r', label = '100 SMA')
+    plt.plot(ma200, 'g', label = '200 SMA')
+    plt.xlabel('Time')
+    plt.ylabel('Price')
+    plt.legend()
+    st.pyplot(fig)
 
 
     #NEWS Part
